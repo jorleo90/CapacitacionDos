@@ -1,0 +1,171 @@
+{
+  "id": "a3ade346-90c2-48d2-936b-118f6c86c055",
+  "version": "2.0",
+  "name": "Sabado",
+  "url": "http://sahitest.com",
+  "tests": [{
+    "id": "89dbf106-af63-4859-b6d0-a5838218f853",
+    "name": "Login",
+    "commands": [{
+      "id": "85c318e1-2186-4d63-9707-c6470b02ae37",
+      "comment": "",
+      "command": "open",
+      "target": "/demo/training/login.htm",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "42feead8-42f5-40f3-b4eb-aa1de8e669da",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1366x728",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c64ff143-9989-4c2b-87f1-791e28fe1930",
+      "comment": "",
+      "command": "click",
+      "target": "name=user",
+      "targets": [
+        ["name=user", "name"],
+        ["css=tr:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@name='user']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92b7d2d3-f578-407d-8879-62f5375df9d9",
+      "comment": "",
+      "command": "type",
+      "target": "name=user",
+      "targets": [
+        ["name=user", "name"],
+        ["css=tr:nth-child(1) input", "css:finder"],
+        ["xpath=//input[@name='user']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "test"
+    }, {
+      "id": "d3672812-9c74-4890-a9fb-65badd66edb3",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [],
+      "value": "secret"
+    }, {
+      "id": "2d2afef5-9a45-436d-bb1c-74024306898b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//input[@value='Login']", "xpath:attributes"],
+        ["xpath=//tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3c72acd-8574-48f9-aa9e-4cea1862fd2c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#available > h2",
+      "targets": [
+        ["css=#available > h2", "css:finder"],
+        ["xpath=//div[@id='available']/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'All available books')]", "xpath:innerText"]
+      ],
+      "value": "All available books"
+    }, {
+      "id": "098c9ca1-37f4-4f40-a0f4-d403a97d76c4",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=tr:nth-child(2) input", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//table[@id='listing']/tbody/tr[2]/td[4]/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "2"
+    }, {
+      "id": "624541c2-d10c-4625-9796-8d50543986cc",
+      "comment": "",
+      "command": "type",
+      "target": "css=tr:nth-child(3) input",
+      "targets": [
+        ["css=tr:nth-child(3) input", "css:finder"],
+        ["xpath=(//input[@name='q'])[2]", "xpath:attributes"],
+        ["xpath=//table[@id='listing']/tbody/tr[3]/td[4]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[4]/input", "xpath:position"]
+      ],
+      "value": "3"
+    }, {
+      "id": "78de8f69-b2a6-43a5-b290-09ab75a446ae",
+      "comment": "",
+      "command": "type",
+      "target": "css=tr:nth-child(4) input",
+      "targets": [
+        ["css=tr:nth-child(4) input", "css:finder"],
+        ["xpath=(//input[@name='q'])[3]", "xpath:attributes"],
+        ["xpath=//table[@id='listing']/tbody/tr[4]/td[4]/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[4]/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "1bad0c9b-c346-4084-b2b3-95069f581fcf",
+      "comment": "",
+      "command": "click",
+      "target": "css=input:nth-child(4)",
+      "targets": [
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@value='Add']", "xpath:attributes"],
+        ["xpath=//div[@id='available']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "64593a6b-adb6-4d65-8d5b-b4854b3cc3c9",
+      "comment": "",
+      "command": "storeValue",
+      "target": "id=total",
+      "targets": [
+        ["id=total", "id"],
+        ["css=#total", "css:finder"],
+        ["xpath=//input[@id='total']", "xpath:attributes"],
+        ["xpath=//div[@id='cart']/input", "xpath:idRelative"],
+        ["xpath=//center/div/input", "xpath:position"]
+      ],
+      "value": "var1"
+    }, {
+      "id": "d64b1d56-c66d-4cdf-958e-b5729f061ebf",
+      "comment": "",
+      "command": "echo",
+      "target": "${var1}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d44b189-5707-4d84-bad4-236f61eeea59",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=total",
+      "targets": [
+        ["id=total", "id"],
+        ["css=#total", "css:finder"],
+        ["xpath=//input[@id='total']", "xpath:attributes"],
+        ["xpath=//div[@id='cart']/input", "xpath:idRelative"],
+        ["xpath=//center/div/input", "xpath:position"]
+      ],
+      "value": "1550"
+    }]
+  }],
+  "suites": [{
+    "id": "21011caa-7217-4c49-baaa-236b104a6275",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["89dbf106-af63-4859-b6d0-a5838218f853"]
+  }],
+  "urls": ["http://sahitest.com/"],
+  "plugins": []
+}
